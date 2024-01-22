@@ -1,3 +1,6 @@
+body {
+    background-image: url('/image/weather-bg.jpg');
+}
 .center {
     display: block;
     margin-left: auto;
