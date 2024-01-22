@@ -49,7 +49,7 @@ function getWeather(cityName) {
 
             const iconFilename = iconCode === '' ? 'default-icon.png' : iconMapping[iconCode] || 'default-icon.png';
             const iconUrl = `./icons/${iconFilename}`;
-            weather_type.innerHTML = `<img src="${iconUrl}" style="width:70px; height:70px;" alt="Weather Icon">`;
+            weather_type.innerHTML = `<img src="${iconUrl}" style="width:50px; height:50px;" alt="Weather Icon">`;
 
 
             // Display sunrise and sunset times
