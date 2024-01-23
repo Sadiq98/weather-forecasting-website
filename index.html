@@ -10,10 +10,10 @@
 </head>
 
 
-<body class="bg-light">
+<body class="">
     <header>
         <!-- navbar -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary bg-primary">
+        <nav class="navbar navbar-expand-lg   shadow">
             <div class="container-fluid">
                 <a class="navbar-brand text-white" href="#">Weather Forecast</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -44,13 +44,12 @@
 
     <main>
         <div class="container">
-           <div class="container">
             <div class="row">
-                <div class="col-lg-7">
-                    <div class="card  m-4 p-3">
-                        <div class="card-body" id="weatherResult">
+                <div class="col-lg-5 pe-5">
+                    <div class="card  m-4 p-3  border-0 ">
+                        <div class="card-body text-white" id="weatherResult">
                             <h5 class="card-title"><span id="city_name"></span>, <span id="country"></span></h5>
-                            <p class="card-text text-dark-50"> <span id="timeZone"></span> </p>
+                            <p class="card-text text-white-50"> <span id="timeZone"></span> </p>
                             <div class="d-flex justify-content-between">
                                 <div >
                                     <h1><span id="temCelsius"></span><sup>&deg;</sup></h1>
@@ -67,82 +66,70 @@
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="card  m-4">
-                        <div class="card-body">
+                    <div class="card  m-4  border-0">
+                        <div class="card-body text-white">
                             <div class="container">
-                                <h6 class=" p-2 text-black-50 text-center">Air Quality Index (AQI)</h6>
+                                <h5 class=" p-2 text-center mb-3">Air Quality Index (AQI)</h6>
                                 <div class="row">
-                                    <div class=" col-lg-6">
-                                        <div class="progress blue">
-                                            <span class="progress-left">
-                                                <span class="progress-bar"></span>
-                                            </span>
-                                            <span class="progress-right">
-                                                <span class="progress-bar"></span>
-                                            </span>
-                                            <div class="progress-value">90%</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 d-flex align-items-center justify-content-center">
-                                        <div>
+                                        <div class="progress mb-3">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
+                                          </div>
+                                          <div>
                                             <h5 class="text-center">
                                                 <strong class="d-block">Bad (359)</strong>
                                             </h5>
-                                            <span class="d-block text-center text-black-50">Take Caution Outdoors</span>
+                                            <span class="d-block text-center fw-light text-white-50">Take Caution Outdoors</span>
                                         </div>
-                                    </div>
-
                                 </div>
-                            </div>
+                            </div> 
 
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="card m-4">
-                    <div class="card-header bg-white">
-                        <div class="d-flex justify-content-between m-0">
-                            <div class="col-lg-8">
-                                <p class="text-black-50">Feels Like</p>
-                                <h5>
-                            </div>
-                            <div class="col-lg-4 text-end">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="blue"
-                                    class="bi bi-thermometer-sun" viewBox="0 0 16 16">
-                                    <path
-                                        d="M5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585A1.5 1.5 0 0 1 5 12.5" />
-                                    <path
-                                        d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1m5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5m4.243 1.757a.5.5 0 0 1 0 .707l-.707.708a.5.5 0 1 1-.708-.708l.708-.707a.5.5 0 0 1 .707 0M8 5.5a.5.5 0 0 1 .5-.5 3 3 0 1 1 0 6 .5.5 0 0 1 0-1 2 2 0 0 0 0-4 .5.5 0 0 1-.5-.5M12.5 8a.5.5 0 0 1 .5-.5h1a.5.5 0 1 1 0 1h-1a.5.5 0 0 1-.5-.5m-1.172 2.828a.5.5 0 0 1 .708 0l.707.708a.5.5 0 0 1-.707.707l-.708-.707a.5.5 0 0 1 0-.708M8.5 12a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5" />
-                                </svg>
-                                <strong><span id="feels_like"></span></strong><sup>&deg;</sup></h3>
-                            </div>
+                <div class="card m-4 border-0 text-white">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between m-0 mb-3">
+                        <div class="col-lg-8">
+                            <h6 class="text-white-50">Feels Like</h6>
+                            <h5>
                         </div>
-                        
-                        <div class="d-flex justify-content-between ">
-                            
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange"
-                                    class="bi bi-sunrise" viewBox="0 0 16 16">
-                                    <path
-                                        d="M7.646 1.146a.5.5 0 0 1 .708 0l1.5 1.5a.5.5 0 0 1-.708.708L8.5 2.707V4.5a.5.5 0 0 1-1 0V2.707l-.646.647a.5.5 0 1 1-.708-.708zM2.343 4.343a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L2.343 5.05a.5.5 0 0 1 0-.707m11.314 0a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0M8 7a3 3 0 0 1 2.599 4.5H5.4A3 3 0 0 1 8 7m3.71 4.5a4 4 0 1 0-7.418 0H.499a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1h-3.79zM0 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 10m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
-                                </svg>
-                                <span id="sunrise"></span>
-                            </div>
-                            <div>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red"
-                                    class="bi bi-sunset" viewBox="0 0 16 16">
-                                    <path
-                                        d="M7.646 4.854a.5.5 0 0 0 .708 0l1.5-1.5a.5.5 0 0 0-.708-.708l-.646.647V1.5a.5.5 0 0 0-1 0v1.793l-.646-.647a.5.5 0 1 0-.708.708zm-5.303-.51a.5.5 0 0 1 .707 0l1.414 1.413a.5.5 0 0 1-.707.707L2.343 5.05a.5.5 0 0 1 0-.707zm11.314 0a.5.5 0 0 1 0 .706l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zM8 7a3 3 0 0 1 2.599 4.5H5.4A3 3 0 0 1 8 7m3.71 4.5a4 4 0 1 0-7.418 0H.499a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1h-3.79zM0 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 10m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
-                                </svg>
-                                <span id="sunset"></span>
-                            </div>
+                        <div class="col-lg-4 text-end">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="blue"
+                                class="bi bi-thermometer-sun" viewBox="0 0 16 16">
+                                <path
+                                    d="M5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585A1.5 1.5 0 0 1 5 12.5" />
+                                <path
+                                    d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1m5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5m4.243 1.757a.5.5 0 0 1 0 .707l-.707.708a.5.5 0 1 1-.708-.708l.708-.707a.5.5 0 0 1 .707 0M8 5.5a.5.5 0 0 1 .5-.5 3 3 0 1 1 0 6 .5.5 0 0 1 0-1 2 2 0 0 0 0-4 .5.5 0 0 1-.5-.5M12.5 8a.5.5 0 0 1 .5-.5h1a.5.5 0 1 1 0 1h-1a.5.5 0 0 1-.5-.5m-1.172 2.828a.5.5 0 0 1 .708 0l.707.708a.5.5 0 0 1-.707.707l-.708-.707a.5.5 0 0 1 0-.708M8.5 12a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5" />
+                            </svg>
+                            <strong><span id="feels_like"></span></strong><sup>&deg;</sup></h3>
                         </div>
                     </div>
-                <div class="card-body">
+                    
+                    <div class="d-flex justify-content-between ">
+                        
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange"
+                                class="bi bi-sunrise" viewBox="0 0 16 16">
+                                <path
+                                    d="M7.646 1.146a.5.5 0 0 1 .708 0l1.5 1.5a.5.5 0 0 1-.708.708L8.5 2.707V4.5a.5.5 0 0 1-1 0V2.707l-.646.647a.5.5 0 1 1-.708-.708zM2.343 4.343a.5.5 0 0 1 .707 0l1.414 1.414a.5.5 0 0 1-.707.707L2.343 5.05a.5.5 0 0 1 0-.707m11.314 0a.5.5 0 0 1 0 .707l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0M8 7a3 3 0 0 1 2.599 4.5H5.4A3 3 0 0 1 8 7m3.71 4.5a4 4 0 1 0-7.418 0H.499a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1h-3.79zM0 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 10m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+                            </svg>
+                            <span id="sunrise"></span>
+                        </div>
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="red"
+                                class="bi bi-sunset" viewBox="0 0 16 16">
+                                <path
+                                    d="M7.646 4.854a.5.5 0 0 0 .708 0l1.5-1.5a.5.5 0 0 0-.708-.708l-.646.647V1.5a.5.5 0 0 0-1 0v1.793l-.646-.647a.5.5 0 1 0-.708.708zm-5.303-.51a.5.5 0 0 1 .707 0l1.414 1.413a.5.5 0 0 1-.707.707L2.343 5.05a.5.5 0 0 1 0-.707zm11.314 0a.5.5 0 0 1 0 .706l-1.414 1.414a.5.5 0 1 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zM8 7a3 3 0 0 1 2.599 4.5H5.4A3 3 0 0 1 8 7m3.71 4.5a4 4 0 1 0-7.418 0H.499a.5.5 0 0 0 0 1h15a.5.5 0 0 0 0-1h-3.79zM0 10a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 0 10m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+                            </svg>
+                            <span id="sunset"></span>
+                        </div>
+                    </div> 
+                    <hr>
                     <div class="row">
                         <div class="col-lg-6 px-4">
-                            <div class="d-flex justify-content-between mb-2 p-2  rounded-pill bg-light">
+                            <div class="d-flex justify-content-between mb-2 p-2  rounded-pill  border-0">
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="orange"
                                         class="bi bi-thermometer-sun" viewBox="0 0 16 16">
@@ -158,7 +145,7 @@
                                     <span id="min_temp"></span><sup>&deg;</sup>
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-between mb-2 p-2 rounded-pill bg-light">
+                            <div class="d-flex justify-content-between mb-2 p-2 rounded-pill  border-0">
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="grey"
                                         class="bi bi-wind " viewBox="0 0 16 16">
@@ -173,7 +160,7 @@
                             </div>
                         </div>
                         <div class="col-lg-6 px-4">
-                            <div class="d-flex justify-content-between  mb-2 p-2 rounded-pill bg-light">
+                            <div class="d-flex justify-content-between  mb-2 p-2 rounded-pill  border-0">
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="lightblue"
                                         class="bi bi-moisture" viewBox="0 0 16 16">
@@ -186,7 +173,7 @@
                                     <span id="humidity"></span>%
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-between  mb-2 p-2 rounded-pill bg-light">
+                            <div class="d-flex justify-content-between  mb-2 p-2 rounded-pill  border-0">
                                 <div>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue"
                                         class="bi bi-eye" viewBox="0 0 16 16">
@@ -210,41 +197,39 @@
                 </div>
             </div>
             </div>
-           </div> 
         </div>
-        
 
     </main>
 
     <footer
-        class="d-flex flex-wrap justify-content-between align-items-center px-3 py-2 border-top bg-secondary fixed-bottom">
+        class="d-flex flex-wrap justify-content-between align-items-center px-3 py-2 border-top  fixed-bottom text-white-50">
         <div class="col-md-4 d-flex align-items-center">
-            <span class="mb-3 mb-md-0 text-white">© Weather Forecast, Inc</span>
+            <span class="mb-3 mb-md-0 ">© Weather Forecast, Inc</span>
         </div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex pe-2 ">
             <li class="ms-3">
-                <a class="text-white" href="#">
+                <a class="" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-twitter-x" viewBox="0 0 16 16">
+                        class="bi bi-twitter-x text-white-50" viewBox="0 0 16 16">
                         <path
                             d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
                     </svg>
                 </a>
             </li>
             <li class="ms-3">
-                <a class="text-white" href="#">
+                <a class="" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-instagram" viewBox="0 0 16 16">
+                        class="bi bi-instagram text-white-50" viewBox="0 0 16 16">
                         <path
                             d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                     </svg>
                 </a>
             </li>
             <li class="ms-3">
-                <a class="text-white" href="https://www.behance.net/sadiqshaikh5">
+                <a class="" href="https://www.behance.net/sadiqshaikh5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-behance" viewBox="0 0 16 16">
+                        class="bi bi-behance text-white-50" viewBox="0 0 16 16">
                         <path
                             d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391s.497.426.641.747c.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922s.461.957.461 1.563c0 .496-.105.922-.285 1.278a2.3 2.3 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.3 5.3 0 0 1-1.278.176L0 12.803V3zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a1 1 0 0 0-.32-.355 1.8 1.8 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305zm6.858-.035q.428.427 1.278.426c.39 0 .746-.106 1.032-.286q.426-.32.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.1 4.1 0 0 1-1.527-.285 2.8 2.8 0 0 1-1.137-.782 2.85 2.85 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4 4 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396m2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176s-.356.25-.496.39a.96.96 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978z" />
                     </svg>
@@ -259,4 +244,4 @@
 <script src="./js/bootstrap.min.js"></script>
 <script src="./js/Script.js"></script>
 
-                </html>
+</html>
