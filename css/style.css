@@ -1,0 +1,7 @@
+body {
+    background-image: url('/image/weather-bg.jpg');
+}
+.card {
+    background: hsla(0, 0%, 100%, 0.059);
+    backdrop-filter: blur(60px);
+}
