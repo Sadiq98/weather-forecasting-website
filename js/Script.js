@@ -1,4 +1,3 @@
-
 // Function to get weather data from OpenWeatherMap API
 function getWeather(cityName) {
     const apiKey = '8f105a824b89534d37c375a8b88905b6';
@@ -49,7 +48,7 @@ function getWeather(cityName) {
 
             const iconFilename = iconCode === '' ? 'default-icon.png' : iconMapping[iconCode] || 'default-icon.png';
             const iconUrl = `./icons/${iconFilename}`;
-            weather_type.innerHTML = `<img src="${iconUrl}" style="width:50px; height:50px;" alt="Weather Icon">`;
+            weather_type.innerHTML = `<img src="${iconUrl}" style="width:70px; height:70px;" alt="Weather Icon">`;
 
 
             // Display sunrise and sunset times
@@ -84,3 +83,7 @@ document.getElementById('city').addEventListener('input', function () {
     const inputCityName = document.getElementById('city').value;
     getWeather(inputCityName);
 });
+
+
+
+
