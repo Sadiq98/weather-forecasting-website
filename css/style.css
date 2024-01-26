@@ -1,7 +1,8 @@
 body {
-    background-image: url('image/weather-bg.jpg');
+    background-image: url('/image/weather-bg.jpg');
+    background-size: cover;
 }
-.card {
-    background: hsla(0, 0%, 100%, 0.059);
+.card,.navbar{
+    background: hsla(0, 0%, 100%, 0);
     backdrop-filter: blur(60px);
 }
