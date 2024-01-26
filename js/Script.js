@@ -14,13 +14,12 @@ function getWeather(cityName) {
             const maxTemp = data.main.temp_max;
             const minTemp = data.main.temp_min;
 
-          
             // Update city name dynamically
             const city_name = document.getElementById('city_name');
-            city_name.innerText = cityName; 
-            
-              // Display weather information
-              feels_like.innerHTML = Math.floor(feels - 273.15);
+            city_name.innerText = cityName;
+
+            // Display weather information
+            feels_like.innerHTML = Math.floor(feels - 273.15);
             country.innerHTML = data.sys.country;
             temCelsius.innerHTML = Math.floor(tempKelvin - 273.15);
             max_temp.innerHTML = Math.floor(maxTemp - 273.15);
@@ -39,17 +38,7 @@ function getWeather(cityName) {
 
             // Display weather icon
             const iconCode = data.weather[0].icon;
-            const iconMapping = {
-                '01d': 'clear-sky.png',
-                '03d': 'few-clouds.png',
-                '50d': 'smoke.png',
-                '04n': 'default-icon.png'
-            };
-
-            const iconFilename = iconCode === '' ? 'default-icon.png' : iconMapping[iconCode] || 'default-icon.png';
-            const iconUrl = `./icons/${iconFilename}`;
-            weather_type.innerHTML = `<img src="${iconUrl}" style="width:70px; height:70px;" alt="Weather Icon">`;
-
+            weather_icon.innerHTML = `<img src="https://openweathermap.org/img/w/${iconCode}.png" style="width:70px; height:70px;" alt="Weather Icon">`;
 
             // Display sunrise and sunset times
             const sunriseTimestamp = data.sys.sunrise;
@@ -86,4 +75,28 @@ document.getElementById('city').addEventListener('input', function () {
 
 
 
+function timeCount() {
+    var today = new Date();
+    var hour = today.getHours();
+    if (hour < 10) hour = "0" + hour;
 
+    var minute = today.getMinutes();
+    if (minute < 10) minute = "0" + minute;
+
+    var time = hour + ":" + minute + "  .";
+
+    var day = today.getDate();
+    var month = getMonthName(today.getMonth() + 1); // Call the getMonthName function
+    var year = today.getFullYear().toString() // Get the last two digits of the year .slice(-2);
+
+    var date = day + " " + month + " " + year;
+
+    document.getElementById("time").innerHTML = time + " " + date;
+
+    setTimeout(timeCount, 1000);
+}
+
+function getMonthName(monthNumber) {
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return months[monthNumber - 1];
+}
